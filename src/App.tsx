@@ -19,11 +19,11 @@ function App() {
 
   const handleSearch = async (): Promise<void> => {
     const result = await axios.get(
-      ` http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${searchLocation}`,
+      ` https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${searchLocation}`,
     );
 
     const weekresult = await axios.get(
-      ` http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${searchLocation}&days=8`,
+      ` https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${searchLocation}&days=8`,
     );
     console.log(weekresult.data);
     console.log('working')
