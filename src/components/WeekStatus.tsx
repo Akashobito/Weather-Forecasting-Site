@@ -1,6 +1,4 @@
 import dayjs from "dayjs";
-import { useState } from "react";
-import PerticularDayStatus from "./PerticularDayStatus";
 
 type weatherObject = {
   [key: string]: any;
