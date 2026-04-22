@@ -1,6 +1,6 @@
 import axios from "axios";
 import "./App.css";
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import "@fontsource-variable/montserrat/wght.css";
 import dayjs from "dayjs";
 import TodayStatus from "./components/TodayStatus";
@@ -153,7 +153,7 @@ function App() {
         )}
 
         {isLoading && (
-          <div className="loading fixed top-50 min-h-[100vh] min-w-[100vw] flex justify-center items-start backdrop-blur-xl">
+          <div className="loading fixed top-45 shadow-2xl min-h-[100vh] min-w-[100vw] flex justify-center items-start backdrop-blur-xl">
             <div className="flex flex-col justify-center mt-40">
               <i className="fa-solid fa-spinner fa-spin-pulse text-5xl"></i>
             </div>
