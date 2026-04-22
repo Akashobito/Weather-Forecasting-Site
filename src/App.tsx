@@ -25,7 +25,7 @@ function App() {
     const weekresult = await axios.get(
       ` http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${searchLocation}&days=8`,
     );
-    // console.log(weekresult.data);
+    console.log(weekresult.data);
     setWeekReport(weekresult.data.forecast.forecastday);
     // console.log(result.data);
     setWeatherList(result.data.forecast.forecastday);
