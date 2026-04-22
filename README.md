@@ -12,7 +12,7 @@ The app provides current weather information such as temperature, humidity, wind
 - Clean and modern UI
 
 ## Tech Stack
-- React.js
+- React.js with Typescript
 - Tailwind CSS
 - Weather API integration
 
