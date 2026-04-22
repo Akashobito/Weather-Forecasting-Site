@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+html {
+  scrollbar-width: none;
+}
+
+body {
+  background-color: rgba(241, 241, 241, 0.6);
+}
+
+
+
+@theme {
+  --font-Roboto: 'Montserrat Variable', sans-serif;
+}
