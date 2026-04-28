@@ -86,7 +86,7 @@ function App() {
               onClick={() => {
                 handleSearch();
               }}
-              className="px-2 py-1 rounded-sm bg-yellow-400 font-bold"
+              className="px-3 py-1 rounded-2xl bg-yellow-400 font-bold"
             >
               search
             </button>
