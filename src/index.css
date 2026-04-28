@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+@custom-variant mobile (@media (max-width: 400px));
+@custom-variant tablet (@media (min-width: 401px) and (max-width: 992px));
+
 html {
   scrollbar-width: none;
 }

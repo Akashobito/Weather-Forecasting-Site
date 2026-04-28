@@ -77,7 +77,7 @@ function App() {
         <div className="mt-5 space-x-4 flex flex-col items-center">
           <div className="flex space-x-5">
             <input
-              className="border-1 p-1 rounded-2xl pl-5"
+              className="border-1 p-1 rounded-2xl pl-5 mobile:ml-3"
               type="text"
               onChange={handleInput}
               onKeyDown={handleEnter}
@@ -86,13 +86,13 @@ function App() {
               onClick={() => {
                 handleSearch();
               }}
-              className="px-2 py-1 rounded-sm bg-yellow-400"
+              className="px-2 py-1 rounded-sm bg-yellow-400 font-bold"
             >
               search
             </button>
           </div>
 
-          <div className="options flex justify-center space-x-8 mt-14">
+          <div className="options flex justify-center space-x-8 mt-14 mobile:space-x-2">
             <p
               onClick={handleToday}
               className={
@@ -130,7 +130,7 @@ function App() {
         </div>
 
         {enableElement && (
-          <div className="flex space-x-2 items-start">
+          <div className="flex space-x-2 items-start mobile:flex mobile:flex-col mobile:items-center tablet:items-start tablet:px-7 tablet:space-x-5">
             {weatherList.length > 0 && !isParticularday && (
               <CurrentStatus weatherList={weatherList} location={location} />
             )}
@@ -153,8 +153,8 @@ function App() {
         )}
 
         {isLoading && (
-          <div className="loading fixed top-45 shadow-2xl min-h-[100vh] min-w-[100vw] flex justify-center items-start backdrop-blur-xl">
-            <div className="flex flex-col justify-center mt-40">
+          <div className="loading fixed top-45 bg-transparent min-h-[100vh] min-w-[100vw] flex justify-center items-start">
+            <div className="flex flex-col justify-center mt-40 backdrop-blur-xl p-5 rounded-xl">
               <i className="fa-solid fa-spinner fa-spin-pulse text-5xl"></i>
             </div>
           </div>

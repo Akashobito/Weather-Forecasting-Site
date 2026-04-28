@@ -16,10 +16,10 @@ function CurrentStatus({weatherList,location}:weatherObject) {
         return (
           <div
             key={index}
-            className="space-y-4 bg-white w-120 border-0 shadow-xl font-semibold text-lg flex flex-col items-center p-10 rounded-2xl my-10"
+            className="space-y-4 bg-white w-120 border-0 shadow-xl font-semibold text-lg flex flex-col items-center p-10 rounded-2xl my-10 mobile:w-fit mobile:mx-0 mobile:text-sm tablet:text-sm"
           >
             <p>Current Status</p>
-            <div className="flex space-x-9">
+            <div className="flex space-x-9 mobile:space-x-6">
               <p>Date: {date}</p>
               <p>Time: {time}</p>
             </div>
@@ -40,25 +40,25 @@ function CurrentStatus({weatherList,location}:weatherObject) {
                     <div className="flex flex-col items-center">
                       <p className="font-semibold">
                         Temperature :
-                        <span className="font-bold text-[16px] pl-2">
+                        <span className="font-bold text-[16px] pl-2 mobile:text-sm">
                           {value.temp_c}°C
                         </span>
                       </p>
                       <p className="font-semibold">
                         Humidity :
-                        <span className="font-bold text-[16px] pl-2">
+                        <span className="font-bold text-[16px] pl-2 mobile:text-sm">
                           {value.humidity} %
                         </span>
                       </p>
                       <p className="font-semibold">
                         Wind Speed :
-                        <span className="font-bold text-[16px] pl-2">
+                        <span className="font-bold text-[16px] pl-2 mobile:text-sm">
                           {value.wind_kph} kph
                         </span>
                       </p>
                       <p className="font-semibold">
                         Condition :
-                        <span className="font-bold text-[16px] pl-2">
+                        <span className="font-bold text-[16px] pl-2 mobile:text-sm">
                           {value.condition.text}
                         </span>
                       </p>
@@ -67,7 +67,7 @@ function CurrentStatus({weatherList,location}:weatherObject) {
                 );
               }
             })}
-            <p>
+            <p className="mobile:flex tablet:text-center">
               Location : {location.name},{location.region},{location.country}
             </p>
             {/* <p>Lattitude: {location.lat}</p>
