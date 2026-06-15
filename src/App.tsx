@@ -7,6 +7,7 @@ import TodayStatus from "./components/TodayStatus";
 import WeekStatus from "./components/WeekStatus";
 import CurrentStatus from "./components/CurrentStatus";
 import PerticularDayStatus from "./components/PerticularDayStatus";
+import UserGuide from "./components/UserGuide";
 
 const API_KEY = import.meta.env.VITE_API_key;
 type weatherObject = {
@@ -24,6 +25,7 @@ function App() {
   const [isParticularday, setIsparticularday] = useState<boolean>(false);
   const [isWeek, setIsWeek] = useState<boolean>(false);
   const [perdayStatus, setPerdayStatus] = useState<weatherObject[]>([]);
+  const [isGuidePopup, setIsGuidePopup] = useState<boolean>(false)
 
   const handleSearch = async (): Promise<void> => {
     setIsLoading(true);
@@ -71,8 +73,13 @@ function App() {
     setIsWeek(false);
   };
 
+  const handleInfo = ():void =>{
+    setIsGuidePopup(!isGuidePopup);
+  }
+
   return (
     <>
+      {isGuidePopup && <UserGuide handleInfo={handleInfo}/>}
       <div className="font-Roboto flex flex-col justify-center items-center">
         <div className="mt-5 space-x-4 flex flex-col items-center">
           <div className="flex space-x-5">
@@ -90,6 +97,10 @@ function App() {
             >
               search
             </button>
+            
+            <div onClick={handleInfo} className="absolute left-4 ring px-1.5 p-1 rounded-2xl cursor-pointer mobile:top-20 z-0 mobile:static mobile:px-1.5 mobile:py-[-10px]">
+              <i className="fa-solid fa-info mobile:text-[12px]"></i>
+            </div>
           </div>
 
           <div className="options flex justify-center space-x-8 mt-14 mobile:space-x-2">
